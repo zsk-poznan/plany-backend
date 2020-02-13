@@ -1,0 +1,10 @@
+[
+    {"subregex": "\\dT\\d\\d_P #\\dT\\d\\d", "roomregex": "(20)", "teacher": "EI", "subject": "Językangielski"},
+    {"subregex": "\\dT\\d\\d_P #\\dT\\d\\d", "roomregex": "(30)", "teacher": "SL", "subject": "Językangielski"},
+    {"subregex": "\\dT\\d\\d_P #\\dT\\d\\d", "roomregex": "(31)", "teacher": "IS", "subject": "Językangielski"},
+    {"subregex": "\\dT\\d\\d_P #\\dT\\d\\d", "roomregex": "(32)", "teacher": "SK", "subject": "Językangielski"},
+    {"subregex": "\\dT\\d\\d_P #\\dT\\d\\d", "roomregex": "(34|36)", "teacher": "JO", "subject": "Językangielski"},
+    {"subregex": "\\dTetyka_P #\\dTetyka", "roomregex": "(22)", "teacher": "SI", "subject": "Etyka"},
+    {"subregex": "\\dG_Tetyka_P #\\dG_Tetyka", "roomregex": "(22)", "teacher": "SI", "subject": "Etyka"},
+    {"subregex": "\\dreligia_P #\\dreligia", "roomregex": "(.*?)", "teacher": "PS", "subject": "Religia"}
+]
