@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@wulkanowy/timetable-parser": "^1.0.8",
+    "@wulkanowy/timetable-parser": "^1.1.0",
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3"
   },

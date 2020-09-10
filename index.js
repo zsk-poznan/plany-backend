@@ -6,6 +6,11 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 var out = {}
 let promises = [];
+
+if (!fs.existsSync("static")) {
+    fs.mkdirSync("static");
+}
+
 axios.get(`${settings.url}/lista.html`).then(response => {
     var $ = cheerio.load(response.data);
     var x = $("p > a")
@@ -17,6 +22,7 @@ axios.get(`${settings.url}/lista.html`).then(response => {
         for (let i = 0; i < args.length; i++) {
             const table = new timetable.Table(args[i].data);
             const lessons = table.getDays();
+	    fs.writeFileSync(`./static/${i}.json`, JSON.stringify(lessons));
             for (day = 0; day <= 4; day++) {
                 for (hour = 0; hour <= 9; hour++) {
                     if (!lessons[day][hour]) continue
@@ -44,9 +50,6 @@ axios.get(`${settings.url}/lista.html`).then(response => {
             }
         }
     })).then(() => {
-        if (!fs.existsSync("static")) {
-            fs.mkdirSync("static");
-        }
         fs.writeFileSync('./static/output.json', JSON.stringify(out))
     })
 })
